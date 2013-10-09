@@ -1,3 +1,5 @@
+require 'matrix'
+
 #Funcion para crear y rellenar las matrices
 def crear_matriz(vec, dimension)
   filas = 1 
@@ -16,11 +18,30 @@ def crear_matriz(vec, dimension)
   end
 end
 
-def sumar(
+def multiplicar(vecx, vecy, dimension)
+   aux = []
+   fila = 1
+   elem = 1
+   numa = 0
+   numb = 0
+   while fila < dimension+1
+     while elem < dimension+1
+        aux[numa] = vecy[numb]
+        numb += dimension
+        numa += 1
+        elem += 1
+     end
+     numb = fila
+     fila += 1
+   end
+
+
+end
 
 #Main
 vec1 = [] 
 vec2 = []
+vec3 = []
 
 #Se recogen las dimensiones de las matrices
 puts "Introduzca la dimensión de la matriz 1"
@@ -46,9 +67,11 @@ if opcion==1
    end
 else
   if dimension1 == dimension2
+     multiplicar(vec1, vec2)
      fila = 1
+     num = 0
      while fila < dimension1 + 1
-       vec3
+       vec3[num] = vec1[num
    
 end
 
